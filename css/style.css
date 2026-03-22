@@ -140,14 +140,17 @@ h1, h2, h3, h4 {
   background: var(--white);
   box-shadow: 0 2px 16px rgba(0,0,0,0.07);
   border-bottom: 3px solid var(--primary);
+  width: 100%;
+  overflow: hidden;
 }
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 72px;
-  gap: 32px;
+  gap: 24px;
 }
+.logo-wrap { min-width: 0; }
 .logo-wrap {
   display: flex;
   align-items: center;
@@ -1171,6 +1174,10 @@ footer {
   nav.main-nav,
   .header-cta { display: none; }
   .nav-toggle { display: flex; }
+  .header-inner { gap: 0; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-box { padding: 16px 12px; gap: 10px; }
+  .manufacturing-range-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .mobile-menu {
     display: none;
     position: absolute;
@@ -1209,4 +1216,8 @@ footer {
   .why-grid { grid-template-columns: 1fr; }
   .container { padding: 0 16px; }
   .contact-form-card { padding: 24px 20px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stat-box { padding: 12px 8px; gap: 8px; }
+  .stat-box .icon-wrap { width: 36px; height: 36px; }
+  .manufacturing-range-grid { grid-template-columns: 1fr !important; }
 }
