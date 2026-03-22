@@ -1,0 +1,6 @@
+# Netlify Redirects — SGS Instruments
+# Clean URL redirects (optional but good for SEO)
+/products          /products.html   301
+/about             /about.html      301
+/contact           /contact.html    301
+/product/:id       /product.html?id=:id  200

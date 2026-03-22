@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Meta tags are set dynamically by JS below -->
+  <title>Product | SGS Instruments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="images/sgs-logo.png" alt="SGS Instruments Logo" class="logo-img" onerror="this.style.display='none'">
+        <div class="logo-text">
+          <strong>SGS Instruments</strong>
+          <span>MFG. CO. — NEW DELHI</span>
+        </div>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <div class="header-cta">
+        <a href="contact.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Get a Quote
+        </a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- PRODUCT HERO (populated by JS) -->
+<section class="product-hero" id="product-hero">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="products.html">Products</a>
+      <span class="breadcrumb-sep">›</span>
+      <span id="breadcrumb-name">—</span>
+    </div>
+    <div id="product-hero-cat" style="margin-bottom:12px;"></div>
+    <h1 id="product-title">Loading…</h1>
+    <p class="tagline" id="product-tagline"></p>
+    <div class="product-hero-meta" id="product-meta"></div>
+  </div>
+</section>
+
+<!-- PRODUCT BODY -->
+<div style="background:#F1F5F9;">
+  <div class="container">
+    <div class="product-layout" id="product-layout">
+
+      <!-- Left col: content -->
+      <div class="product-content" id="product-content">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Right col: sticky enquiry card -->
+      <div class="product-side" id="product-side">
+        <div class="enquiry-card">
+          <h3>Interested in this product?</h3>
+          <p>Send us your enquiry and we'll get back within 1 business day with pricing and availability.</p>
+          <button class="btn btn-primary" onclick="document.getElementById('enquiry-form-section').scrollIntoView({behavior:'smooth'})">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Send Enquiry
+          </button>
+          <a href="tel:+919899480998" class="btn btn-secondary" style="margin-top:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Now
+          </a>
+        </div>
+        <div class="contact-quick">
+          <h4>Quick Contact</h4>
+          <div class="contact-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.35 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div><a href="tel:01145142737">011-45142737</a><br><a href="tel:+919899480998">+91 98994 80998</a></div>
+          </div>
+          <div class="contact-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:sgs.instruments@yahoo.co.in">sgs.instruments@yahoo.co.in</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ENQUIRY FORM SECTION -->
+<section class="section bg-white" id="enquiry-form-section">
+  <div class="container" style="max-width:680px;">
+    <div class="section-header">
+      <p class="eyebrow">Send an Enquiry</p>
+      <h2 id="form-product-name">Product Enquiry</h2>
+      <p>Fill in your details below. All fields marked <span style="color:#E85D04">*</span> are required.</p>
+    </div>
+
+    <div class="contact-form-card" style="max-width:100%;">
+      <!-- Replace YOUR_FORM_ID with your Formspree form ID after signing up at formspree.io -->
+      <form id="product-enquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="hidden" name="product" id="form-hidden-product">
+        <input type="hidden" name="_subject" id="form-subject">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pe-name">Full Name <span class="required">*</span></label>
+            <input type="text" id="pe-name" name="name" placeholder="Your full name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="pe-email">Email Address <span class="required">*</span></label>
+            <input type="email" id="pe-email" name="email" placeholder="your@email.com" required autocomplete="email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="pe-business">Business / Company Name <span class="required">*</span></label>
+          <input type="text" id="pe-business" name="business_name" placeholder="Your company or organisation name" required autocomplete="organization">
+        </div>
+        <div class="form-group">
+          <label for="pe-phone">Phone Number <span style="color:#94A3B8;font-weight:400;">(Optional)</span></label>
+          <input type="tel" id="pe-phone" name="phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
+          <p class="form-note">We may call to understand your requirements better.</p>
+        </div>
+        <div class="form-group">
+          <label for="pe-message">Your Message / Requirements</label>
+          <textarea id="pe-message" name="message" placeholder="Please describe your requirements, quantity needed, or any specific questions about this product…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:15px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Send Enquiry
+        </button>
+        <p style="font-size:0.77rem;color:#94A3B8;text-align:center;margin-top:10px;">We respond within 1 business day. Your information is never shared with third parties.</p>
+      </form>
+      <div class="form-success">
+        <div class="success-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Enquiry Sent Successfully!</h3>
+        <p>Thank you for your interest. Our team will contact you within 1 business day with pricing and availability details.</p>
+        <a href="products.html" class="btn btn-ghost" style="margin-top:20px;">Browse More Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section class="section" id="related-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">More Products</p>
+      <h2>You May Also Be Interested In</h2>
+    </div>
+    <div class="products-grid" id="related-grid" style="grid-template-columns: repeat(4, 1fr);"></div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="products.html" class="btn btn-ghost">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script src="js/products-data.js"></script>
+<script src="js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const product = PRODUCTS.find(p => p.id === id);
+
+  if (!product) {
+    document.getElementById('product-title').textContent = 'Product Not Found';
+    document.getElementById('product-tagline').textContent = 'The requested product could not be found.';
+    return;
+  }
+
+  // --- Update SEO meta tags ---
+  document.title = `${product.name} | SGS Instruments — Lab Equipment Manufacturer, Delhi`;
+  document.querySelector('meta[name="description"]') || document.head.appendChild(Object.assign(document.createElement('meta'), {name:'description'}));
+  document.querySelector('meta[name="description"]').content =
+    `${product.shortDesc} Manufactured by SGS Instruments Mfg. Co., New Delhi. HSN Code: ${product.hsnCode}.`;
+
+  // --- Structured Data for product ---
+  const ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": product.name,
+    "description": product.shortDesc,
+    "image": `https://sgsinstruments.com/${product.image}`,
+    "sku": product.models[0]?.modelNo || product.id,
+    "brand": { "@type": "Brand", "name": "SGS Instruments" },
+    "manufacturer": { "@type": "Organization", "name": "SGS Instruments Mfg. Co." },
+    "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "INR", "seller": { "@type": "Organization", "name": "SGS Instruments Mfg. Co." } }
+  });
+  document.head.appendChild(ld);
+
+  // --- Hero ---
+  document.getElementById('breadcrumb-name').textContent = product.name;
+  document.getElementById('product-hero-cat').innerHTML =
+    `<span class="meta-chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#FDBA74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg> ${product.category}</span>`;
+  document.getElementById('product-title').textContent = product.name;
+  document.getElementById('product-tagline').textContent = product.tagline;
+  document.getElementById('product-meta').innerHTML = `
+    <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FDBA74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> HSN Code: ${product.hsnCode}</span>
+    <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FDBA74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Feed Material: ${product.feedMaterial}</span>
+    <span class="meta-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FDBA74" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> Made in New Delhi, India</span>
+  `;
+
+  // --- Main Content ---
+  const modelsHTML = product.models.length > 0 ? `
+    <div class="content-card">
+      <h2>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" x2="21" y1="6" y2="6"/><line x1="8" x2="21" y1="12" y2="12"/><line x1="8" x2="21" y1="18" y2="18"/><line x1="3" x2="3.01" y1="6" y2="6"/><line x1="3" x2="3.01" y1="12" y2="12"/><line x1="3" x2="3.01" y1="18" y2="18"/></svg>
+        Models & Specifications
+      </h2>
+      <div style="overflow-x:auto;">
+        <table class="models-table">
+          <thead>
+            <tr>${product.modelHeaders.map(h => `<th>${h}</th>`).join('')}</tr>
+          </thead>
+          <tbody>
+            ${product.models.map(m => `
+              <tr>${Object.values(m).map((v, i) => `<td${i===0?' class="model-no"':''}>${v}</td>`).join('')}</tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  ` : '';
+
+  document.getElementById('product-content').innerHTML = `
+    <!-- Product Image -->
+    <div class="product-main-img">
+      <img src="${product.image}" alt="${product.name} — SGS Instruments" loading="eager">
+    </div>
+
+    <!-- Description -->
+    <div class="content-card">
+      <h2>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+        Product Description
+      </h2>
+      <p>${product.fullDesc}</p>
+    </div>
+
+    <!-- Key Features -->
+    <div class="content-card">
+      <h2>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+        Key Features
+      </h2>
+      <div class="features-list">
+        ${product.keyFeatures.map(f => `
+          <div class="feature-item">
+            <span class="feature-check">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>${f}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    ${modelsHTML}
+
+    <!-- Applications -->
+    <div class="content-card">
+      <h2>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg>
+        Applications
+      </h2>
+      <div class="apps-grid">
+        ${product.applications.map(a => `
+          <span class="app-chip">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            ${a}
+          </span>
+        `).join('')}
+      </div>
+    </div>
+  `;
+
+  // Set form fields
+  document.getElementById('form-product-name').textContent = `Enquire About: ${product.name}`;
+  document.getElementById('form-hidden-product').value = product.name;
+  document.getElementById('form-subject').value = `Enquiry: ${product.name} — SGS Instruments`;
+
+  // --- Related products (same category, excluding current) ---
+  const related = PRODUCTS.filter(p => p.id !== product.id && p.category === product.category).slice(0, 4);
+  const relGrid = document.getElementById('related-grid');
+  if (related.length > 0 && relGrid) {
+    relGrid.innerHTML = related.map(p => `
+      <a class="product-card" href="product.html?id=${p.id}">
+        <div class="card-img">
+          <img src="${p.image}" alt="${p.name}" loading="lazy">
+          <span class="card-category-badge">${p.category}</span>
+        </div>
+        <div class="card-body">
+          <h3>${p.name}</h3>
+          <p>${p.shortDesc}</p>
+          <div class="card-footer-row">
+            <span class="hsn-tag">HSN: ${p.hsnCode}</span>
+            <span class="card-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+    `).join('');
+  } else {
+    document.getElementById('related-section').style.display = 'none';
+  }
+
+  // Init form
+  initContactForm('product-enquiry-form');
+});
+</script>
+</body>
+</html>

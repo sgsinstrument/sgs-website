@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sgsinstruments.com/sitemap.xml

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | SGS Instruments — Lab Testing Equipment Manufacturer, Delhi</title>
+  <meta name="description" content="Browse SGS Instruments' complete range of laboratory testing equipment: jaw crushers, pulverizers, HGI machines, muffle furnaces, hot air ovens, and more. Manufactured in New Delhi, India.">
+  <meta name="keywords" content="lab jaw crusher India, HGI machine manufacturer, lab muffle furnace, coal pulverizer, proving ring, hot air oven laboratory, SGS instruments products">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://sgsinstruments.com/products.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header id="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="logo-wrap">
+        <img src="images/sgs-logo.png" alt="SGS Instruments Logo" class="logo-img" onerror="this.style.display='none'">
+        <div class="logo-text">
+          <strong>SGS Instruments</strong>
+          <span>MFG. CO. — NEW DELHI</span>
+        </div>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <div class="header-cta">
+        <a href="contact.html" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Get a Quote
+        </a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Products</span>
+    </div>
+    <h1>Our Product Catalogue</h1>
+    <p>Precision laboratory instruments for coal, mineral, cement, aggregate and soil testing — manufactured in New Delhi to Indian Standards.</p>
+  </div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+<section class="section">
+  <div class="container">
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs" id="filter-tabs">
+      <button class="filter-tab active" data-category="All">All Products</button>
+      <button class="filter-tab" data-category="Crushing &amp; Grinding">Crushing &amp; Grinding</button>
+      <button class="filter-tab" data-category="Testing Instruments">Testing Instruments</button>
+      <button class="filter-tab" data-category="Thermal Equipment">Thermal Equipment</button>
+    </div>
+
+    <!-- Results count -->
+    <p id="results-count" style="font-size:0.85rem; color:#64748B; margin-bottom:24px; text-align:center;"></p>
+
+    <!-- Products Grid -->
+    <div class="products-grid" id="products-grid"></div>
+
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container" style="position:relative;z-index:1">
+    <h2>Don't See What You Need?</h2>
+    <p>We manufacture a wide range of lab instruments. Contact us with your requirements and we'll find the right solution for your laboratory.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn btn-white btn-lg">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+
+<script src="js/products-data.js"></script>
+<script src="js/app.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.getElementById('products-grid');
+  const tabs = document.querySelectorAll('.filter-tab');
+  const countEl = document.getElementById('results-count');
+  let activeCategory = 'All';
+
+  // Check URL param for pre-filtered category
+  const urlParams = new URLSearchParams(window.location.search);
+  const catParam = urlParams.get('category');
+  if (catParam) {
+    activeCategory = catParam;
+    tabs.forEach(t => {
+      t.classList.toggle('active', t.dataset.category === activeCategory);
+    });
+  }
+
+  function renderProducts(category) {
+    const filtered = category === 'All'
+      ? PRODUCTS
+      : PRODUCTS.filter(p => p.category === category);
+
+    countEl.textContent = `Showing ${filtered.length} of ${PRODUCTS.length} products`;
+
+    grid.innerHTML = filtered.map(p => `
+      <a class="product-card" href="product.html?id=${p.id}">
+        <div class="card-img">
+          <img src="${p.image}" alt="${p.name}" loading="lazy">
+          <span class="card-category-badge">${p.category}</span>
+        </div>
+        <div class="card-body">
+          <h3>${p.name}</h3>
+          <p>${p.shortDesc}</p>
+          <div class="card-footer-row">
+            <span class="hsn-tag">HSN: ${p.hsnCode}</span>
+            <span class="card-arrow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+    `).join('');
+
+    // Animate cards in
+    grid.querySelectorAll('.product-card').forEach((card, i) => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        card.style.transition = 'all 0.35s ease';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, i * 50);
+    });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      activeCategory = tab.dataset.category;
+      renderProducts(activeCategory);
+    });
+  });
+
+  renderProducts(activeCategory);
+});
+</script>
+</body>
+</html>
